@@ -3,11 +3,16 @@ const readline = require("readline");
 let rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.question(
-  "Enter the number you want to check whether it is a Armstrong number: ",
+  "Enter the number you want to check whether it is an Armstrong number: ",
   (value) => {
-    checkArmstrongNumber(Number(value))
-      ? console.log(Number(value) + " is a Armstrong number.")
-      : console.log(Number(value) + " is NOT a Armstrong number.");
+    console.log(
+      Number(value)
+        ? Number(value) +
+            (checkArmstrongNumber(Number(value))
+              ? " is an Armstrong number."
+              : " is NOT an Armstrong number.")
+        : "Invalid input"
+    );
     rl.close();
   }
 );

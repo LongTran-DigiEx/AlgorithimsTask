@@ -11,6 +11,9 @@ rl.question(
 );
 
 function factorial(numb) {
+  if (numb <= 0) return "Only takes positive values";
+  if (!numb) return "Input only takes number";
+
   if (numb === 1) return 1;
 
   return numb * factorial(numb - 1);

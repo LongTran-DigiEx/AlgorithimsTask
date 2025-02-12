@@ -11,6 +11,9 @@ rl.question(
 );
 
 function fibonacci(numb) {
+  if (numb <= 0) return "Only takes positive values";
+  if (!numb) return "Input only takes number";
+
   let fibonacciArr = [];
   fibonacciArr[0] = 0;
   fibonacciArr[1] = 1;
