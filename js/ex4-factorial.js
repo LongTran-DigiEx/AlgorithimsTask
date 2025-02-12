@@ -1,5 +1,3 @@
-let inputValue;
-
 const readline = require("readline");
 
 let rl = readline.createInterface(process.stdin, process.stdout);
@@ -7,8 +5,7 @@ let rl = readline.createInterface(process.stdin, process.stdout);
 rl.question(
   "Enter the number you want to calculate using the factorial method: ",
   (value) => {
-    inputValue = Number(value);
-    console.log("Result: " + factorial(inputValue));
+    console.log("Result: " + factorial(Number(value)));
     rl.close();
   }
 );

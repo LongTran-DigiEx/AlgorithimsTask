@@ -1,5 +1,3 @@
-let inputValue;
-
 const readline = require("readline");
 
 let rl = readline.createInterface(process.stdin, process.stdout);
@@ -7,8 +5,7 @@ let rl = readline.createInterface(process.stdin, process.stdout);
 rl.question(
   "Enter the position of the number you want to find in the Fibonacci sequence: ",
   (value) => {
-    inputValue = Number(value);
-    console.log("Result: " + fibonacci(inputValue));
+    console.log("Result: " + fibonacci(Number(value)));
     rl.close();
   }
 );

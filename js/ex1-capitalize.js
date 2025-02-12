@@ -1,12 +1,9 @@
-let inputValue;
-
 const readline = require("readline");
 
 let rl = readline.createInterface(process.stdin, process.stdout);
 
 rl.question("Input your string: ", (value) => {
-  inputValue = value;
-  console.log("Your string is: " + capitalize(inputValue));
+  console.log("Your string is: " + capitalize(value));
   rl.close();
 });
 
